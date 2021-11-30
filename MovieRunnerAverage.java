@@ -16,7 +16,7 @@ public class MovieRunnerAverage {
         System.out.println("Total number of movies : " + secondRatings.getMovieSize());
         System.out.println("Total number of raters : " + secondRatings.getRaterSize());
         
-        int MinNumOfRatings = 50; // variable
+        int MinNumOfRatings = 50; 
         ArrayList<Rating> averageRatings = secondRatings.getAverageRatings(MinNumOfRatings);
         Collections.sort(averageRatings);
         for (Rating rating : averageRatings) {
@@ -29,8 +29,8 @@ public class MovieRunnerAverage {
     public void getAverageRatingOneMovie () {
         SecondRatings secondRatings = new SecondRatings ("ratedmoviesfull", "ratings");
         
-        String title = "The Purge"; // variable
-        int MinNumOfRatings = 1; // variable
+        String title = "The Purge"; 
+        int MinNumOfRatings = 1; 
         
         String movieID = secondRatings.getID(title);
         ArrayList<Rating> averageRatings = secondRatings.getAverageRatings(MinNumOfRatings);

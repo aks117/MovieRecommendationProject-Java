@@ -9,7 +9,7 @@ public class MovieRunnerWithFilters {
         System.out.println("Read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("Read data for " + MovieDatabase.size() + " movies");
         
-        int minNumOfRatings = 35; // variable
+        int minNumOfRatings = 35; 
         ArrayList<Rating> averageRatings = thirdRatings.getAverageRatings(minNumOfRatings);
         System.out.println("There are " + averageRatings.size() + " movies with " +
         minNumOfRatings + " or more rating(s) :");
@@ -27,10 +27,10 @@ public class MovieRunnerWithFilters {
         System.out.println("Read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("Read data for " + MovieDatabase.size() + " movies");
         
-        int year = 2000; // variable
+        int year = 2000; 
         YearAfterFilter yaf = new YearAfterFilter (year);
         
-        int minNumOfRatings = 20; // variable
+        int minNumOfRatings = 20; 
         ArrayList<Rating> averageRatings = thirdRatings.getAverageRatingsByFilter(minNumOfRatings, yaf);
         System.out.println("There are " + averageRatings.size() + " movies released after "
         + year + " with " + minNumOfRatings + " or more rating(s) : ");
@@ -49,10 +49,10 @@ public class MovieRunnerWithFilters {
         System.out.println("Read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("Read data for " + MovieDatabase.size() + " movies");
         
-        String genre = "Comedy"; // variable
+        String genre = "Comedy";
         GenreFilter gf = new GenreFilter (genre);
         
-        int minNumOfRatings = 20; // variable
+        int minNumOfRatings = 20;
         ArrayList<Rating> averageRatings = thirdRatings.getAverageRatingsByFilter(minNumOfRatings, gf);
         System.out.println("There are " + averageRatings.size() + " movies  in genre of \""
         + genre + "\" with " + minNumOfRatings + " or more rating(s) :");
@@ -71,11 +71,11 @@ public class MovieRunnerWithFilters {
         System.out.println("Read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("Read data for " + MovieDatabase.size() + " movies");
         
-        int minMinutes = 105; // variable
-        int maxMinutes = 135; // variable
+        int minMinutes = 105; 
+        int maxMinutes = 135; 
         MinutesFilter mf = new MinutesFilter (minMinutes, maxMinutes);
         
-        int minNumOfRatings = 5; // variable
+        int minNumOfRatings = 5;
         ArrayList<Rating> averageRatings = thirdRatings.getAverageRatingsByFilter(minNumOfRatings, mf);        
         Collections.sort(averageRatings);
         for (Rating rating : averageRatings) {
@@ -96,7 +96,7 @@ public class MovieRunnerWithFilters {
         String directorsList = "Clint Eastwood,Joel Coen,Martin Scorsese,Roman Polanski,Nora Ephron,Ridley Scott,Sydney Pollack"; // variable
         DirectorsFilter df = new DirectorsFilter (directorsList);
         
-        int minNumOfRatings = 4; // variable
+        int minNumOfRatings = 4;
         ArrayList<Rating> averageRatings = thirdRatings.getAverageRatingsByFilter(minNumOfRatings, df);
         System.out.println("There are " + averageRatings.size() + " movies that were directed " 
         + "by either of those directors : " +  directorsList + ", with " + minNumOfRatings 
@@ -116,17 +116,17 @@ public class MovieRunnerWithFilters {
         System.out.println("Read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("Read data for " + MovieDatabase.size() + " movies");
         
-        int year = 1990; // variable
+        int year = 1990;
         YearAfterFilter yaf = new YearAfterFilter (year);
         
-        String genre = "Drama"; // variable
+        String genre = "Drama";
         GenreFilter gf = new GenreFilter (genre);
         
         AllFilters af = new AllFilters();
         af.addFilter(yaf);
         af.addFilter(gf);
         
-        int minNumOfRatings = 8; // variable
+        int minNumOfRatings = 8;
         ArrayList<Rating> avgRatings = thirdRatings.getAverageRatingsByFilter(minNumOfRatings, af);        
         Collections.sort(avgRatings);
         for (Rating rating : avgRatings) {
@@ -148,15 +148,15 @@ public class MovieRunnerWithFilters {
         String directorsList = "Clint Eastwood,Joel Coen,Tim Burton,Ron Howard,Nora Ephron,Sydney Pollack"; // variable
         DirectorsFilter df = new DirectorsFilter (directorsList);
         
-        int minMinutes = 90; // variable
-        int maxMinutes = 180; // variable
+        int minMinutes = 90;
+        int maxMinutes = 180;
         MinutesFilter mf = new MinutesFilter (minMinutes, maxMinutes);
         
         AllFilters af = new AllFilters();
         af.addFilter(df);
         af.addFilter(mf);
         
-        int minNumOfRatings = 3; // variable
+        int minNumOfRatings = 3;
         ArrayList<Rating> avgRatings = thirdRatings.getAverageRatingsByFilter(minNumOfRatings, af);
         System.out.println("There is(are) " + avgRatings.size() + " movie(s) that were filmed by"
         + " either one of these directors : " + directorsList + "; and between " 
